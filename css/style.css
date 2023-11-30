@@ -1,0 +1,144 @@
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  font-family: "Overlock", cursive;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(222, 186, 222, 0.337254902);
+  box-sizing: border-box;
+}
+body .header, body .footer {
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  background-color: #293d29;
+  box-sizing: border-box;
+}
+body .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: rgba(222, 186, 222, 0.337254902);
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+body .content .contentHeading {
+  text-align: center;
+  margin-bottom: 0;
+}
+body .content .box {
+  background-color: #b4cbbf;
+  border: 2px solid #293d29;
+  padding: 20px;
+}
+body .content .box:hover {
+  background-color: rgba(175, 146, 175, 0.337254902);
+}
+body .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+body .dice-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+body .dice-container .dice {
+  width: 80px;
+  height: 80px;
+  margin: 0 10px;
+}
+body .dice-container .scoreDisplay {
+  font-size: 16px;
+  margin-top: 10px;
+}
+body .player-container, body .computer-container {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+body .round-info {
+  color: #293d29;
+}
+body .game-result, body #player-score, body #computer-score {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  color: #293d29;
+}
+body .buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+body .roll-btn, body .reset-btn {
+  background-color: #b39bbb;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: large;
+}
+body .roll-btn:hover, body .reset-btn:hover {
+  background-color: #9c7da6;
+}
+body .accordion {
+  background-color: rgba(222, 186, 222, 0.337254902);
+  color: #293d29;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-weight: bolder;
+}
+body .accordion.active, body .accordion:hover {
+  background-color: #b39bbb;
+}
+body .panel {
+  padding: 0 18px;
+  display: none;
+  background-color: rgba(222, 186, 222, 0.337254902);
+  overflow: hidden;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: large;
+  font-weight: bold;
+  color: #293d29;
+}
+body table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgba(222, 186, 222, 0.337254902);
+}
+body td, body th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}

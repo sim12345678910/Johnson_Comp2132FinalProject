@@ -1,0 +1,178 @@
+$primary-color: #293d29;
+$secondary-color: #debade56;
+$hover-color: #af92af56;
+$button-color: #b39bbb;
+
+// SASS mixin for button styles
+@mixin button-styles {
+  background-color: $button-color;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: large;
+
+  &:hover {
+    background-color: darken($button-color, 10%);
+  }
+}
+
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Overlock', cursive;
+}
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+body 
+{
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
+  align-items: center;
+  min-height: 100vh;
+  background-color: $secondary-color;
+  box-sizing: border-box;
+  
+
+  .header, .footer {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: $primary-color;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: $secondary-color;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    
+    .contentHeading {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .box {
+      background-color: #b4cbbf;
+      border: 2px solid $primary-color;
+      padding: 20px;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .dice-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+
+    .dice {
+      width: 80px;  
+      height: 80px;
+      margin: 0 10px;
+    }
+
+    .scoreDisplay {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  }
+
+  .player-container, .computer-container {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  .round-info{
+    color: $primary-color;
+  }
+
+  .game-result, #player-score, #computer-score {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    color: $primary-color;
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .roll-btn, .reset-btn {
+    @include button-styles;
+  }
+
+  .accordion {
+    background-color: $secondary-color;
+    color: $primary-color;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    font-weight: bolder;
+
+    
+
+    &.active, &:hover {
+      background-color: $button-color;
+    }
+    
+  }
+
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: $secondary-color;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: large;
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  table {
+    
+    border-collapse: collapse;
+    width: 100%;
+    background-color: $secondary-color;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+}
